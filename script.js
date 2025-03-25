@@ -98,7 +98,7 @@ function actualizarJuego() {
             fantasma.y < gato.y + gato.height
         ) {
             gameOver = true;
-            mostrarVictoria();
+            mostrarGameOver(); // Mostrar mensaje de game over
         }
 
         ctx.drawImage(fantasma.image, fantasma.x, fantasma.y, fantasma.width, fantasma.height);
@@ -137,6 +137,13 @@ function mostrarVictoria() {
     ctx.font = "50px Arial";
     ctx.fillText("¡Ganaste!", canvas.width / 2 - 150, canvas.height / 2);
     sonidoGano.play();
+}
+
+function mostrarGameOver() {
+    ctx.fillStyle = "red";
+    ctx.font = "50px Arial";
+    ctx.fillText("¡Perdiste!", canvas.width / 2 - 150, canvas.height / 2);
+    sonidoGameOver.play();
 }
 
 canvas.addEventListener("click", eliminarFantasma);

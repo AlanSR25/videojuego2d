@@ -27,7 +27,8 @@ body {
 }
 
 .menu-img {
-    width: 200px;
+    width: 400px; /* Aumentado 4 veces el tamaño original */
+    height: auto;
 }
 
 #playButton {
@@ -66,4 +67,15 @@ footer {
     width: 100%;
     padding: 10px;
     background: rgba(0, 0, 0, 0.7);
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
