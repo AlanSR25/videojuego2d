@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazafantasmas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        /* Aseguramos que la imagen del juego sea 4 veces más grande */
+        .menu-img {
+            width: 400px; /* Cambia esto a 400px o el tamaño que prefieras */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <audio id="introSound" autoplay>
+        <source src="assets/intro.wav" type="audio/wav">
+    </audio>
+
+    <video id="background-video" autoplay loop muted>
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
+
+    <header class="text-center p-4">
+        <h1 class="titulo">¡Bienvenido a Cazafantasmas!</h1>
+        <img src="assets/juego.png" alt="Personaje principal" class="menu-img">
+    </header>
+
+    <main class="text-center">
+        <p class="texto-instrucciones">Elimina todos los fantasmas antes de que alcancen a tu amigo.</p>
+        <button id="playButton" class="btn btn-danger">Jugar</button>
+    </main>
+
+    <footer class="text-center p-3">
+        <p class="creador">Creado por Hernández Gómez Ingrid (22200738) y Santiago Rodríguez Alan (22200767)</p>
+    </footer>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            window.location.href = "juego.html";
+        });
+    </script>
+</body>
+</html>
